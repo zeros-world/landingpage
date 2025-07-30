@@ -14,82 +14,101 @@
         body, html {
             height: 100%;
             font-family: Arial, sans-serif;
-            overflow: hidden;
+            overflow: auto;
         }
         
         .container {
             position: relative;
             width: 100vw;
-            height: 100vh;
-            background-image: url('landing-page-design.png');
+            min-height: 100vh;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+        }
+        
+        /* Desktop version - uses your current landscape image */
+        .container {
+            background-image: url('landing-page-design.png');
         }
         
         .clickable-area {
             position: absolute;
             cursor: pointer;
             transition: opacity 0.2s ease;
+            z-index: 10;
         }
         
         .clickable-area:hover {
             opacity: 0.8;
         }
         
-        /* Whatnot button positioning */
+        /* Desktop positioning - fixed the alignment issues */
         .whatnot-button {
-            right: 5%;
-            top: 56%;
-            width: 35%;
-            height: 8%;
+            right: 5.5%;
+            top: 58%;
+            width: 33%;
+            height: 6%;
         }
         
-        /* Email button positioning */
         .email-button {
-            right: 5%;
-            top: 66%;
-            width: 35%;
-            height: 8%;
+            right: 5.5%;
+            top: 67%;
+            width: 33%;
+            height: 6%;
         }
         
-        /* Mobile responsive adjustments */
+        /* Mobile styles - switches to portrait image if available */
         @media (max-width: 768px) {
             .container {
+                /* If you create a mobile version, name it landing-page-mobile.png */
+                /* For now, keeps using the same image but with better positioning */
+                background-image: url('landing-page-design.png');
                 background-size: contain;
                 background-color: #87CEEB;
+                background-position: center center;
             }
             
             .whatnot-button {
                 right: 8%;
-                top: 56%;
-                width: 40%;
-                height: 10%;
+                top: 58%;
+                width: 38%;
+                height: 8%;
             }
             
             .email-button {
                 right: 8%;
-                top: 67%;
-                width: 40%;
-                height: 10%;
+                top: 68%;
+                width: 38%;
+                height: 8%;
             }
         }
         
         @media (max-width: 480px) {
             .whatnot-button {
                 right: 10%;
-                top: 56%;
-                width: 45%;
-                height: 12%;
+                top: 58%;
+                width: 42%;
+                height: 10%;
             }
             
             .email-button {
                 right: 10%;
-                top: 68%;
-                width: 45%;
-                height: 12%;
+                top: 69%;
+                width: 42%;
+                height: 10%;
             }
         }
+        
+        /* If you want to use a separate mobile image, uncomment this: */
+        /*
+        @media (max-width: 768px) {
+            .container {
+                background-image: url('landing-page-mobile.png');
+                background-size: cover;
+                background-position: center;
+            }
+        }
+        */
     </style>
 </head>
 <body>
