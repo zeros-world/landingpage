@@ -42,59 +42,60 @@
             opacity: 0.8;
         }
         
-        /* Desktop positioning - fixed the alignment issues */
+        /* Desktop positioning - corrected based on user feedback */
         .whatnot-button {
-            right: 5.5%;
-            top: 58%;
-            width: 33%;
-            height: 6%;
+            right: 7%;
+            top: 66%;
+            width: 35%;
+            height: 7%;
         }
         
         .email-button {
-            right: 5.5%;
-            top: 67%;
-            width: 33%;
-            height: 6%;
+            right: 7%;
+            top: 75%;
+            width: 35%;
+            height: 7%;
         }
         
-        /* Mobile styles - switches to portrait image if available */
+        /* Mobile styles */
         @media (max-width: 768px) {
             .container {
-                /* If you create a mobile version, name it landing-page-mobile.png */
-                /* For now, keeps using the same image but with better positioning */
                 background-image: url('landing-page-design.png');
                 background-size: contain;
                 background-color: #87CEEB;
-                background-position: center center;
+                background-position: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
             
             .whatnot-button {
-                right: 8%;
-                top: 58%;
-                width: 38%;
+                right: 5%;
+                top: 55%;
+                width: 40%;
                 height: 8%;
             }
             
             .email-button {
-                right: 8%;
-                top: 68%;
-                width: 38%;
+                right: 5%;
+                top: 65%;
+                width: 40%;
                 height: 8%;
             }
         }
         
         @media (max-width: 480px) {
             .whatnot-button {
-                right: 10%;
-                top: 58%;
-                width: 42%;
+                right: 5%;
+                top: 55%;
+                width: 45%;
                 height: 10%;
             }
             
             .email-button {
-                right: 10%;
-                top: 69%;
-                width: 42%;
+                right: 5%;
+                top: 66%;
+                width: 45%;
                 height: 10%;
             }
         }
