@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeros World - Sorry We're Closed</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        
+        .container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('landing-page-design.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .clickable-area {
+            position: absolute;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+        }
+        
+        .clickable-area:hover {
+            opacity: 0.8;
+        }
+        
+        /* Whatnot button positioning */
+        .whatnot-button {
+            right: 5%;
+            top: 56%;
+            width: 35%;
+            height: 8%;
+        }
+        
+        /* Email button positioning */
+        .email-button {
+            right: 5%;
+            top: 66%;
+            width: 35%;
+            height: 8%;
+        }
+        
+        /* Mobile responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                background-size: contain;
+                background-color: #87CEEB;
+            }
+            
+            .whatnot-button {
+                right: 8%;
+                top: 56%;
+                width: 40%;
+                height: 10%;
+            }
+            
+            .email-button {
+                right: 8%;
+                top: 67%;
+                width: 40%;
+                height: 10%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .whatnot-button {
+                right: 10%;
+                top: 56%;
+                width: 45%;
+                height: 12%;
+            }
+            
+            .email-button {
+                right: 10%;
+                top: 68%;
+                width: 45%;
+                height: 12%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Clickable area for Whatnot button -->
+        <a href="https://www.whatnot.com/user/zerosworld?sender_id=3007478&sharing_channel=sms" 
+           target="_blank" 
+           class="clickable-area whatnot-button"
+           aria-label="Find us on Whatnot"></a>
+        
+        <!-- Clickable area for Email button -->
+        <a href="mailto:info@zeros.world" 
+           class="clickable-area email-button"
+           aria-label="Email us at info@zeros.world"></a>
+    </div>
+</body>
+</html>
