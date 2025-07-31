@@ -21,38 +21,37 @@
             position: relative;
             width: 100vw;
             min-height: 100vh;
+            background-image: url('landing-page-design.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
         
-        /* Desktop version - uses your current landscape image */
-        .container {
-            background-image: url('landing-page-design.png');
-        }
-        
         .clickable-area {
             position: absolute;
             cursor: pointer;
-            transition: opacity 0.2s ease;
+            transition: all 0.2s ease;
             z-index: 10;
+            /* Temporarily visible so you can see where they are */
+            background-color: rgba(255, 0, 0, 0.3);
+            border: 2px solid red;
         }
         
         .clickable-area:hover {
-            opacity: 0.8;
+            background-color: rgba(255, 0, 0, 0.5);
         }
         
-        /* Desktop positioning - fine-tuned based on user feedback */
+        /* Start with basic positioning - you can adjust these */
         .whatnot-button {
             right: 7%;
-            top: 60%;
+            top: 56%;
             width: 35%;
             height: 6%;
         }
         
         .email-button {
             right: 7%;
-            top: 68%;
+            top: 64%;
             width: 35%;
             height: 6%;
         }
@@ -60,56 +59,24 @@
         /* Mobile styles */
         @media (max-width: 768px) {
             .container {
-                background-image: url('landing-page-design.png');
                 background-size: contain;
                 background-color: #87CEEB;
-                background-position: center;
-                display: flex;
-                align-items: center;
-                justify-content: center;
             }
             
             .whatnot-button {
                 right: 5%;
-                top: 55%;
+                top: 56%;
                 width: 40%;
                 height: 8%;
-            }
-            
-            .email-button {
-                right: 5%;
-                top: 65%;
-                width: 40%;
-                height: 8%;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .whatnot-button {
-                right: 5%;
-                top: 55%;
-                width: 45%;
-                height: 10%;
             }
             
             .email-button {
                 right: 5%;
                 top: 66%;
-                width: 45%;
-                height: 10%;
+                width: 40%;
+                height: 8%;
             }
         }
-        
-        /* If you want to use a separate mobile image, uncomment this: */
-        /*
-        @media (max-width: 768px) {
-            .container {
-                background-image: url('landing-page-mobile.png');
-                background-size: cover;
-                background-position: center;
-            }
-        }
-        */
     </style>
 </head>
 <body>
