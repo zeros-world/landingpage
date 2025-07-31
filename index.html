@@ -21,11 +21,24 @@
     position: relative;
     width: 100vw;
     min-height: 100vh;
+    background-image: url('background-pattern.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url('landing-page-design.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #87CEEB;
+    z-index: 1;
 }
         
         .clickable-area {
