@@ -70,26 +70,48 @@
             height: 6%;
         }
         
-        /* Mobile styles */
-        @media (max-width: 768px) {
-            .container {
-                background-size: contain;
-                background-color: #87CEEB;
-            }
-            
-            .whatnot-button {
-                right: 5%;
-                top: 56%;
-                width: 40%;
-                height: 8%;
-            }
-            
-            .email-button {
-                right: 5%;
-                top: 64%;
-                width: 40%;
-                height: 8%;
-            }
+       /* Mobile styles */
+@media (max-width: 768px) {
+    .container {
+        background-image: url('background-pattern.png');
+        background-size: cover;
+    }
+    
+    .container::before {
+        background-image: url('landing-page-mobile-2.png');
+        background-size: contain;
+    }
+    
+    .whatnot-button {
+        right: 5%;
+        top: 56%;
+        width: 40%;
+        height: 8%;
+    }
+    
+    .email-button {
+        right: 5%;
+        top: 66%;
+        width: 40%;
+        height: 8%;
+    }
+}
+
+@media (max-width: 480px) {
+    .whatnot-button {
+        right: 5%;
+        top: 56%;
+        width: 45%;
+        height: 10%;
+    }
+    
+    .email-button {
+        right: 5%;
+        top: 67%;
+        width: 45%;
+        height: 10%;
+    }
+}
         }
     </style>
 </head>
